@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+    <link href="{{ url_for('static', filename='img/favicon.png') }}" rel="icon">
+    <link href="{{ url_for('static', filename='img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <!-- Favicons -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="{{ url_for('static', filename='js/app.main.js') }}"></script>
+    <title>{% block title %}{% endblock %}</title>
+    <script>
+        const http = window.location.protocol,host = window.location.host,pathname = window.location.pathname,lang=window.navigator.language,hash=window.location.hash,search=window.location.search,id_ajax=http+'\/\/'+host+'\/forms\/id_ajax.php',id_user=http+'\/\/'+host+'\/forms\/id.php',logOut=http+'\/\/'+host+'\/forms\/logout.php';
+        
+        //history.pushState({page: 'home'}, '', '/');
+        
+        var userAg=window.navigator.userAgent,mobile="undefined"!=typeof window.navigator&&/Mobile/.test(userAg),mac="undefined"!=typeof window.navigator&&/Macintosh/.test(userAg),msie="undefined"!=typeof window.navigator&&/MSIE/.test(userAg),oprWebkit="undefined"!=typeof window.navigator&&!/Opera/.test(userAg)&&/WebKit/.test(userAg),script = document.createElement('script'),actived = true,XhrOrFetch;
+        
+        var theDrag = function()
+        {
+            let div = document.createElement('div');
+            return ( ('draggable' in div) || ('ondragstart' in div && 'ondrop' in div) );
+        }(), validFetch = function()
+        {
+            return  ( 'FormData' in window && 'FileReader' in window && 'fetch' in window && 'sessionStorage' in window && 'onpopstate' in window );
+        }(),idus = "id_user=";
+        
+        if(validFetch)
+        {
+            script.src=http+'\/\/'+host+'\/assets\/js\/app.fetch.js';
+            //document.children[0].lastElementChild.appendChild(script);
+            XhrOrFetch = new FormData();
+        }else{
+            script.src=http+'\/\/'+host+'\/assets\/js\/app.xhr.js';
+            document.children[0].lastElementChild.appendChild(script);
+        }
+            
+        function cookieId(id){	
+          let cav = document.cookie.split(";");
+          if( document.cookie ){
+            for( let i = 0; i < cav.length; i++ ){
+              let d = cav[i];
+              while( d.charAt(0) == ' ' ){
+                d = d.substring(1);
+              }
+              if( d.indexOf(id) == 0 ){
+                let w=d.split('=');
+                if('undefined'!=w)return w[1];
+              }
+            }
+          }
+        }
+        
+        function getInnerHeight() {
+            if ('innerHeight' in window){
+                return window.innerHeight;
+            }
+            return document.documentElement.clientHeight;
+        }
+        
+        function getScrollTop(){
+            if ('scrollTop' in window) {
+                return window.scrollTop;
+            }
+            return document.documentElement.scrollTop;
+        }
+        
+        function createElement(tag, className, text) {
+          let element = document.createElement(tag);
+          if (void 0 != className) element.className = className;
+          if (void 0 != text) element.innerText = text;
+          return element;
+        }
+        
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>h92barrios</h1>
+    </header>
+    <main>
+        <aside>
+            <ul>
+                <li class="active"><a href="/" title="Inicio"><span class="txtMenu">Inicio</span> <i class="fa fa-home-alt"></i></a></li>
+                <li><a href="/about" title="Sobre Mi"><span class="txtMenu">Sobre Mi</span> <i class="fa fa-user"></i></a></li>
+                <li><a href="/tools" title="Herramientas"><span class="txtMenu">Herramientas</span> <i class="fa fa-tools"></i></a></li>
+                <li><a href="/hobbits" title="Pasatiempos"><span class="txtMenu">Pasatiempos</span> <i class="fa fa-book"></i></a></li>
+                <li><a href="/acercade" title="Acerca De"><span class="txtMenu">Acerca De</span> <i class="fab fa-adn"></i></a></li>
+            </ul>
+        </aside>
+        <div class="contenido">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+    <footer>
+        <div class="top-footer">
+            <div class="left-footer">
+                <ul class="nav">
+                    <li><a><i class="fas fa-keyboard"></i> Tecleo En</a>
+                        <ul class="upmenu">
+                            <li><a><i class="fab fa-php"></i> PHP</a></li>
+                            <li><a><i class="fab fa-python"></i> PYTHON</a></li>
+                            <li><a><i class="fab fa-git"></i> GIT</a></li>
+                            <li><a><i class="fab fa-js"></i> JS</a></li>
+                            <li><a><i class="fab fa-css3"></i>CSS</a></li>
+                            <li><a><i class="fab fa-sass"></i>SASS</a></li>
+                            <li><a><i class="fab fa-html5"></i>HTML</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-footer">
+                <ul class="nav">
+                    <li><a><i class="fab fa-phoenix-framework"></i> Framework</a>
+                        <ul class="upmenu">
+                            <li><a href="#"><i class="fa fa-flask"></i> Flask</a></li>
+                            <li><a href="#"><i class="far fa-django"></i> Django</a></li>
+                            <li><a href="#"><i class="fab fa-laravel"></i> Laravel</a></li>
+                            <li><a href="#"><i class="fab fa-symfony"></i> Symfony</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="by-footer">
+            <span>Creado por: <a href="#">h92barrios &lt;/&gt;</a> con <a href="#">Flask</a></span>
+        </div>
+    </footer>
+</body>
+
+</html>

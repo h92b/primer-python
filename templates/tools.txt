@@ -1,0 +1,56 @@
+<ul>
+  <li>
+    <h4>
+			Editores de Texto
+		</h4>
+    <div style="padding: 0 0 0 12px">
+      <p>
+        Visual Studio Code  <br>
+        <span>  </span>Con las extensiones
+      </p>
+      <p>
+        Notepad++  <br>
+        <span>  </span>Con las extensiones
+      </p>
+    </div>
+  </li>
+  <li>
+    <h4>
+			Navegadores
+		</h4>
+    <div style="padding: 0 0 0 12px">
+      <p>
+        Opera
+      </p>
+      <p>
+        Chrome
+      </p>
+      <p>
+        Firefox
+      </p>
+      <p>
+        EDGE
+      </p>
+    </div>
+  </li>
+  <li>
+    <h4>
+			Servidor Local
+		</h4>
+    <div style="padding: 0 0 0 12px">
+      <p>
+        XAMPP
+      </p>
+    </div>
+  </li>
+  <li>
+    <h4>
+			Manejador de Base de Dato
+		</h4>
+    <div style="padding: 0 0 0 12px">
+      <p>
+        Maria DB
+      </p>
+    </div>
+  </li>
+</ul>

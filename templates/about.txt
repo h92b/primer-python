@@ -1,0 +1,8 @@
+<div>
+  <p>
+    &#161;Hola&#33; m&iacute; nombre es H&eacute;ctor; llevo programando aproximadamente desde el 2015, nac&iacute; en Venezuela en el a&ntilde;o 1992 y vivo en Venezuela. comence como programador con paginas simples en PHP, CSS, JavaScript obvio con una estructura HTML.
+  </p>
+  <p>
+    A los 15 a&ntilde;os de edad la curiosidad por c&oacute;mo funciona la WEB me introdujo al mundo de la informatica.
+  </p>
+</div>

@@ -1,0 +1,15 @@
+body {
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  /* selector for class */ }
+  body .dark {
+    color: #000; }
+
+a {
+  color: #2545dc;
+  text-decoration: none; }
+
+select {
+  padding: 62px;
+  margin: 0; }

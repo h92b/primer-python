@@ -1,0 +1,39 @@
+/* estilo general */
+@function col-width($num)
+  @return 100% / $num
+
+body
+  margin: 0
+  
+a
+  text-decoration: none
+  
+.d-none
+  display: none
+  
+.d-block
+  display: block
+  
+.d-flex
+  display: flex
+  
+.inp
+  border: 1px solid #e5e5e5
+  
+.btn-submit
+  height: 40px
+  outline: none
+  text-align: center
+  width: 100px
+  
+.position-relative
+  position: relative
+  
+.position-absolute
+  position: absolute
+  
+//col
+@for $i from 1 to 7
+  .col-#{$i}
+    width: col-width($i)
+//col

@@ -1,0 +1,48 @@
+/* estilo general */
+body {
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+.d-none {
+  display: none; }
+
+.d-block {
+  display: block; }
+
+.d-flex {
+  display: flex; }
+
+.inp {
+  border: 1px solid #e5e5e5; }
+
+.btn-submit {
+  height: 40px;
+  outline: none;
+  text-align: center;
+  width: 100px; }
+
+.position-relative {
+  position: relative; }
+
+.position-absolute {
+  position: absolute; }
+
+.col-1 {
+  width: 100%; }
+
+.col-2 {
+  width: 50%; }
+
+.col-3 {
+  width: 33.33333%; }
+
+.col-4 {
+  width: 25%; }
+
+.col-5 {
+  width: 20%; }
+
+.col-6 {
+  width: 16.66667%; }
